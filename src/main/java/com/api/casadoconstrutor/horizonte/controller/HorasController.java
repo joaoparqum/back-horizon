@@ -69,6 +69,7 @@ public class HorasController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Hora Válida não encontrada!!");
         }
 
+        horasService.delete(horasValidas.get());
         return ResponseEntity.status(HttpStatus.OK).body("Hora Válida deletada com sucesso!!");
     }
 
