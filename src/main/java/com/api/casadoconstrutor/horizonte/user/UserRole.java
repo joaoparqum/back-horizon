@@ -3,6 +3,8 @@ package com.api.casadoconstrutor.horizonte.user;
 public enum UserRole {
 
     ADMIN("admin"),
+    ADMIN_VISTAS("admin_vistas"),
+    ADMIN_SGHT("admin_sght"),
     USER("user");
 
     private String role;
