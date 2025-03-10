@@ -44,7 +44,7 @@ public class SolicitacaoService {
     }
 
     public Solicitacao aprovarOuRejeitarSolicitacao(Long solicitacaoId, StatusSolicitacao novoStatus, User user) throws AccessDeniedException {
-        if(user.getRole() != UserRole.ADMIN) {
+        if(user.getRole() != UserRole.ADMIN_SGHT) {
             throw new AccessDeniedException("Apenas usuários ADMIN podem alterar o status das solicitacoes");
         }
 
