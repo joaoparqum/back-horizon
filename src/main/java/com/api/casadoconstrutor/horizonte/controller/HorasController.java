@@ -107,38 +107,56 @@ public class HorasController {
                 case "filial":
                     horasValidas.setFilial(Filial.valueOf(value));
                     break;
-                case "junhoJulho":
-                    horasValidas.setJunhoJulho(value);
+                case "ano24_junhoJulho":
+                    horasValidas.setAno24_junhoJulho(value);
                     break;
-                case "agosto":
-                    horasValidas.setAgosto(value);
+                case "ano24_agosto":
+                    horasValidas.setAno24_agosto(value);
                     break;
-                case "setembroOutubro":
-                    horasValidas.setSetembroOutubro(value);
+                case "ano24_setembroOutubro":
+                    horasValidas.setAno24_setembroOutubro(value);
                     break;
-                case "novembro":
-                    horasValidas.setNovembro(value);
+                case "ano24_novembro":
+                    horasValidas.setAno24_novembro(value);
                     break;
-                case "dezembro":
-                    horasValidas.setDezembro(value);
+                case "ano24_dezembro":
+                    horasValidas.setAno24_dezembro(value);
                     break;
-                case "janeiro":
-                    horasValidas.setJaneiro(value);
+                case "ano25_janeiro":
+                    horasValidas.setAno25_janeiro(value);
                     break;
-                case "fevereiro":
-                    horasValidas.setFevereiro(value);
+                case "ano25_fevereiro":
+                    horasValidas.setAno25_fevereiro(value);
                     break;
-                case "marco":
-                    horasValidas.setMarco(value);
+                case "ano25_marco":
+                    horasValidas.setAno25_marco(value);
                     break;
-                case "abril":
-                    horasValidas.setAbril(value);
+                case "ano25_abril":
+                    horasValidas.setAno25_abril(value);
                     break;
-                case "maio":
-                    horasValidas.setMaio(value);
+                case "ano25_maio":
+                    horasValidas.setAno25_maio(value);
                     break;
-                case "junho":
-                    horasValidas.setJunho(value);
+                case "ano25_junho":
+                    horasValidas.setAno25_junho(value);
+                    break;
+                case "ano25_julho":
+                    horasValidas.setAno25_julho(value);
+                    break;
+                case "ano25_agosto":
+                    horasValidas.setAno25_agosto(value);
+                    break;
+                case "ano25_setembro":
+                    horasValidas.setAno25_setembro(value);
+                    break;
+                case "ano25_outubro":
+                    horasValidas.setAno25_outubro(value);
+                    break;
+                case "ano25_novembro":
+                    horasValidas.setAno25_novembro(value);
+                    break;
+                case "ano25_dezembro":
+                    horasValidas.setAno25_dezembro(value);
                     break;
                 default:
                     break;

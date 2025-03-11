@@ -20,10 +20,11 @@ public class HorasService {
         Duration totalDuration = Duration.ZERO;
 
         String[] campos = {
-                horasValidas.getJunhoJulho(), horasValidas.getAgosto(), horasValidas.getSetembroOutubro(),
-                horasValidas.getNovembro(), horasValidas.getDezembro(), horasValidas.getJaneiro(),
-                horasValidas.getFevereiro(), horasValidas.getMarco(), horasValidas.getAbril(),
-                horasValidas.getMaio(), horasValidas.getJunho()
+                horasValidas.getAno24_junhoJulho(), horasValidas.getAno24_agosto(), horasValidas.getAno24_setembroOutubro(),
+                horasValidas.getAno24_novembro(), horasValidas.getAno24_dezembro(), horasValidas.getAno25_janeiro(),
+                horasValidas.getAno25_fevereiro(), horasValidas.getAno25_marco(), horasValidas.getAno25_abril(),
+                horasValidas.getAno25_maio(), horasValidas.getAno25_junho(), horasValidas.getAno25_julho(), horasValidas.getAno25_agosto(),
+                horasValidas.getAno25_setembro(), horasValidas.getAno25_outubro(), horasValidas.getAno25_novembro(), horasValidas.getAno25_dezembro()
         };
 
         for (String campo : campos) {
