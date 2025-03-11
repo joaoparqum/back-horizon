@@ -3,6 +3,7 @@ package com.api.casadoconstrutor.horizonte.service;
 import com.api.casadoconstrutor.horizonte.model.HorasValidas;
 import com.api.casadoconstrutor.horizonte.repository.HorasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
@@ -70,7 +71,7 @@ public class HorasService {
     }
 
     public List<HorasValidas> findAll() {
-        return this.horasRepository.findAll();
+        return this.horasRepository.findAll(Sort.by(Sort.Direction.ASC, "nomeColaborador"));
     }
 
     public Optional<HorasValidas> findById(Long id) {
