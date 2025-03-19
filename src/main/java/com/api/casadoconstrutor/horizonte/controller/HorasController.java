@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/horizonte/horas")
+@RequestMapping("/api/horizonte/horas")
 public class HorasController {
 
     final HorasService horasService;

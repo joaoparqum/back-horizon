@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/horizonte/comprovantes")
+@RequestMapping("/api/horizonte/comprovantes")
 public class ComprovanteController {
 
     final ComprovanteService comprovanteService;

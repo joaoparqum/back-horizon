@@ -1,0 +1,27 @@
+version: '3'
+services:
+  frontend-horizonte:
+    container_name: frontend-horizonte
+    build: ../front-horizonte/.
+    ports:
+      - 5173:80
+    networks:
+      - horizonte-net
+
+  backend-horizonte:
+    build: .
+    container_name: backend-horizonte
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://24.144.93.247:5432/horizon_db
+      - SPRING_DATASOURCE_USERNAME=horizon_user
+      - SPRING_DATASOURCE_PASSWORD=horizon123
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+    networks:
+      - horizonte-net
+
+networks:
+  horizonte-net:
+    driver: bridge

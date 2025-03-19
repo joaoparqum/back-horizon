@@ -34,26 +34,26 @@ public class SecurityConfigurations {
                 .cors().and()
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(HttpMethod.POST, "/horizonte/auth/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/horizonte/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/horizonte/vistas/upload").hasAnyRole("ADMIN", "ADMIN_VISTAS")
-                        .requestMatchers(HttpMethod.DELETE, "/horizonte/vistas/delete/{id}").hasAnyRole("ADMIN", "ADMIN_VISTAS")
-                        .requestMatchers(HttpMethod.GET, "/horizonte/vistas/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/horizonte/solicitacoes").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/horizonte/solicitacoes").hasRole("USER")
-                        .requestMatchers(HttpMethod.PATCH, "/horizonte/solicitacoes/*/status").hasAnyRole("ADMIN", "ADMIN_SGHT")
-                        .requestMatchers(HttpMethod.DELETE, "/horizonte/solicitacoes/*").permitAll()
-                        .requestMatchers(HttpMethod.PATCH, "/horizonte/solicitacoes/*").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/horizonte/solicitacoes/*").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/horizonte/solicitacoes/nome/*").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/horizonte/solicitacoes/motivo/*").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/horizonte/horas").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/horizonte/horas/*").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/horizonte/horas").hasAnyRole("ADMIN", "ADMIN_SGHT")
-                        .requestMatchers(HttpMethod.PATCH, "/horizonte/horas/*").hasAnyRole("ADMIN", "ADMIN_SGHT")
-                        .requestMatchers(HttpMethod.PUT, "/horizonte/horas").hasAnyRole("ADMIN","ADMIN_SGHT")
-                        .requestMatchers(HttpMethod.DELETE, "/horizonte/horas").hasAnyRole("ADMIN","ADMIN_SGHT")
-                        .requestMatchers(HttpMethod.GET, "/horizonte/comprovantes/view/*").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/horizonte/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/horizonte/auth/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/horizonte/vistas/upload").hasAnyRole("ADMIN", "ADMIN_VISTAS")
+                        .requestMatchers(HttpMethod.DELETE, "/api/horizonte/vistas/delete/{id}").hasAnyRole("ADMIN", "ADMIN_VISTAS")
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/vistas/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/solicitacoes").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/horizonte/solicitacoes").hasRole("USER")
+                        .requestMatchers(HttpMethod.PATCH, "/api/horizonte/solicitacoes/*/status").hasAnyRole("ADMIN", "ADMIN_SGHT")
+                        .requestMatchers(HttpMethod.DELETE, "/api/horizonte/solicitacoes/*").permitAll()
+                        .requestMatchers(HttpMethod.PATCH, "/api/horizonte/solicitacoes/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/solicitacoes/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/solicitacoes/nome/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/solicitacoes/motivo/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/horas").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/horas/*").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/horizonte/horas").hasAnyRole("ADMIN", "ADMIN_SGHT")
+                        .requestMatchers(HttpMethod.PATCH, "/api/horizonte/horas/*").hasAnyRole("ADMIN", "ADMIN_SGHT")
+                        .requestMatchers(HttpMethod.PUT, "/api/horizonte/horas").hasAnyRole("ADMIN","ADMIN_SGHT")
+                        .requestMatchers(HttpMethod.DELETE, "/api/horizonte/horas").hasAnyRole("ADMIN","ADMIN_SGHT")
+                        .requestMatchers(HttpMethod.GET, "/api/horizonte/comprovantes/view/*").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
@@ -74,7 +74,7 @@ public class SecurityConfigurations {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173"));
+        configuration.setAllowedOrigins(Arrays.asList("http://24.144.93.247"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);

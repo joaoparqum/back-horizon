@@ -25,7 +25,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/horizonte/solicitacoes")
+@RequestMapping("/api/horizonte/solicitacoes")
 public class SolicitacaoController {
 
     private final SolicitacaoService solicitacaoService;
