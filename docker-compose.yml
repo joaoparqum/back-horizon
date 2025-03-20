@@ -17,7 +17,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://24.144.93.247:5432/horizon_db
       - SPRING_DATASOURCE_USERNAME=horizon_user
-      - SPRING_DATASOURCE_PASSWORD=horizon123
+      - SPRING_DATASOURCE_PASSWORD=hanamichi
       - SPRING_JPA_HIBERNATE_DDL_AUTO=create
     networks:
       - horizonte-net
